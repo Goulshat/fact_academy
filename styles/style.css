@@ -1,0 +1,211 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  height: 100%;
+}
+
+/* --- HEADER --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0;
+  /* margin-bottom: 3rem; */
+}
+
+.header__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  padding: 1rem 2rem;
+}
+
+.header__link:hover,
+.header__link:focus {
+  opacity: .8;
+}
+
+.header__link:active {
+  opacity: .5;
+}
+
+.header__pic {
+  width: auto;
+  height: 10rem;
+}
+
+/* --- MAIN --- */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main__table {
+  flex: 0 1 20%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2.5rem;
+  object-fit: cover;
+}
+
+.main__table-img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.main__content {
+  flex: 1 1 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  align-items: flex-start;
+}
+
+.main__content-heading {
+  margin: 0;
+  padding: 15px 0;
+  /* margin-bottom: 1rem; */
+  width: 100%;
+  font-weight: 400;
+}
+
+.main__content-section {
+  flex-basis: calc((100% - 1rem) / 2);
+}
+
+.main__section-heading {
+  margin: 0;
+  margin-bottom: .5rem;
+  min-height: 4rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.main__section-text {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- FOOTER --- */
+.contacts {
+  margin-top: auto;
+  padding: 50px;
+}
+
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts__link {
+  color: #333;
+  padding: 1rem 2rem;
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
+  opacity: .8;
+}
+
+.contacts__link:active {
+  opacity: .5;
+}
+
+/*--- TABLES ---*/
+table, td {
+  min-width: 20px;
+  min-height: 20px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+table p {
+  margin: 0;
+}
+
+.elements-table {
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+.elements-table__row {
+  border: none;
+}
+
+.element {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: .5rem 1rem;
+  min-width: 50px;
+  font-size: .8rem;
+}
+
+.element__name {
+  flex: 1 0 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5rem;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+}
+
+.element__name span:first-child {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.element__descr {
+  flex: 1 0 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: .5rem;
+  text-align: left;
+}
+
+.lesson03-01 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 50px;
+}
+
+.lesson03-01 div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
