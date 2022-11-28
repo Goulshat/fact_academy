@@ -22,8 +22,16 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  margin: 0;
+  margin: 0 0 1rem;
   /* margin-bottom: 3rem; */
+}
+
+.header__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
 .header__link {
@@ -56,6 +64,12 @@
   justify-content: space-between;
 }
 
+.main__pic {
+  flex: 1 1 40%;
+  display: block;
+  line-height: 1;
+}
+
 .main__table {
   flex: 0 1 20%;
   display: inline-block;
@@ -73,7 +87,7 @@
 }
 
 .main__content {
-  flex: 1 1 50%;
+  flex: 1 1 60%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -84,14 +98,14 @@
 
 .main__content-heading {
   margin: 0;
-  padding: 15px 0;
+  padding: 1rem 0;
   /* margin-bottom: 1rem; */
   width: 100%;
   font-weight: 400;
 }
 
 .main__content-section {
-  flex-basis: calc((100% - 1rem) / 2);
+  flex-basis: calc((100% - 2rem) / 2);
 }
 
 .main__section-heading {
@@ -110,7 +124,7 @@
 /* --- FOOTER --- */
 .contacts {
   margin-top: auto;
-  padding: 50px;
+  padding: 3rem;
 }
 
 .contacts__list {
@@ -137,75 +151,41 @@
   opacity: .5;
 }
 
-/*--- TABLES ---*/
-table, td {
-  min-width: 20px;
-  min-height: 20px;
-  text-align: center;
-  border: 1px solid black;
+/*--- CATS ---*/
+.cats {
+  width: 100%;
 }
 
-table p {
+.cats__heading {
   margin: 0;
-}
-
-.elements-table {
-  font-size: 1rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
   width: 100%;
-  border: none;
-  border-collapse: collapse;
+  font-weight: 400;
+  text-align: center;
 }
 
-.elements-table__row {
-  border: none;
+.cats__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
-.element {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  padding: .5rem 1rem;
-  min-width: 50px;
-  font-size: .8rem;
+.cats__list--two-columns {
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.element__name {
-  flex: 1 0 65%;
+.cats__item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: .5rem;
-  text-align: left;
-  text-decoration: none;
-  color: inherit;
 }
 
-.element__name span:first-child {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.element__descr {
-  flex: 1 0 35%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: .5rem;
-  text-align: left;
-}
-
-.lesson03-01 {
-  display: flex;
-  justify-content: space-evenly;
+.cats__img {
+  display: block;
+  height: 200px;
   width: 100%;
-  padding: 50px;
-}
-
-.lesson03-01 div {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #ccc;
+  object-fit: cover;
 }
